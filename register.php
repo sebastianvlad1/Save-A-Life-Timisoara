@@ -64,10 +64,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             
             $param_username = $username;
-            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            $param_password = password_hash($password, PASSWORD_DEFAULT); // Cream un hash nou de parola
             
             if(mysqli_stmt_execute($stmt)){
-                // Redirect to login page
+                // Redirecetionam spre pagina de login
                 header("location: login.php");
             } else{
                 echo "Something went wrong. Please try again later.";
@@ -112,6 +112,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="reset" value="Reset">
             </div>
             <p>Ai deja un cont? <a href="login.php">Logheaza-te</a>.</p>
+            <p>Inapoi la <a href="index.php">site</a>.</p>
         </form>
     </div>    
 </div>

@@ -2,7 +2,7 @@ var displayedImage = document.querySelector('.displayed-img');
 var thumbBar = document.querySelector('.thumb-bar');
 
 
-/* Looping through images */
+
 for(var i=1 ; i <= 5 ; i++){
   var newImage = document.createElement('img');
   newImage.setAttribute('src','img/animal' + i + '.jpeg');
@@ -17,3 +17,4 @@ for(var i=1 ; i <= 5 ; i++){
 function displayImage(imgSrc){
 	displayedImage.setAttribute('src',imgSrc);
 }
+

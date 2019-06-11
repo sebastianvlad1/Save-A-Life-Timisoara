@@ -28,6 +28,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </div>
 
             <div class="dropdown">
+                <a href="adopta.php" class="dropbtn">Adopta</a>
+            </div>
+
+          <div class="dropdown">
                 <a href="logout.php" class="dropbtn">Logout</a>
             </div>
         </div>

@@ -35,7 +35,7 @@
 			</div>
 
 			<div class="dropdown">
-		  		<a href="login.php" class="dropbtn">Login/Register</a>
+		  		<a href="login.php" class="dropbtn">Contul meu</a>
 			</div>
 		</div>
 	</div>

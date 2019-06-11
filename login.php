@@ -8,7 +8,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     exit;
 }
  
-// Include config file
+// Includem config file
 require_once "config.php";
  
 $username = $password = "";
@@ -24,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username = trim($_POST["username"]);
     }
     
-    // Verificam daca parola este gola
+    // Verificam daca parola este goala
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";
     } else{
@@ -110,6 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" value="Login">
             </div>
             <p>Daca nu ai cont <a href="register.php">Inregistreaza-te</a>.</p>
+            <p>Inapoi la <a href="index.php">site</a>.</p>
         </form>
     </div>   
     </div> 

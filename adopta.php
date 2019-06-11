@@ -1,4 +1,15 @@
 <?php
+// Initializam sesiunea
+session_start();
+
+ //Verificam daca userul este deja logat, in caz negativ il redireectionam
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
+<?php
 	require "header.php";
 ?>
 
@@ -22,6 +33,14 @@
 
 					</div>
 					<div class="option">
+						<label for="telefon">Nr. telefon:</label>
+						<input type="text" name="telefon" id="telefon" required="">
+					</div>
+					<div class="option">
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" required="">
+					</div>
+					<div class="option">
 						<label>Sexul:</label>
 
 						<label for="m">Masculin</label>
@@ -29,13 +48,6 @@
 
 						<label for="f">Feminin</label>
 						<input type="radio" name="sexul" value="feminin" id="f">
-					</div>
-					<div class="option">
-						<label for="studii">Studii:</label>
-						<select id="studii">
-							<option value="facultate">Facultate</option>
-							<option value="liceu">Liceu</option>
-						</select>
 					</div>
 					<div class="option">
 						<label>Sunt angajat:</label>
@@ -68,7 +80,6 @@
 		</div>
 			</td>
 	</main>
-
 <?php
 	require "footer.php";
 ?>
